@@ -1,3 +1,7 @@
+// require Food model
+const Food = require('../models/Food.js')
+
+// controller methods for show, new, create, edit, update, delete
 const foodController = {
     show: (req, res) => {
         res.send(`Showing food item with id of ${req.params.foodId}`)

@@ -9,15 +9,18 @@ const routes = require('./routes/index.js')
 // BodyParser
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+// logger
 app.use(logger('dev'))
 
 // method override
 app.use(methodOverride('_method'))
 
 // Set view engine
-app.set('view-engine', 'hbs')
+app.set('view engine', 'hbs')
 
-// logger
+// Set public path
+app.use(express.static(__dirname + '/public'))
 
 // Set up route middleware
 app.use('/', routes)

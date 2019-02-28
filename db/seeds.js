@@ -50,7 +50,8 @@ const taq = new Shop({
   category: "Tex-Mex",
   description:
     "Since opening in 2000, Taqueria del Sol has offered diners many inventive and delicious options for lunch and dinner. While the menu is driven by Mexican cuisine, many of the tacos and sides feature cross-cultural flair. Taqueria del Sol is truly one of a kind, juxtaposing the quality of fine dining ingredients against fast-casual prices, and offering authentic Southwestern selections as well as a variety of Southern-inspired menu choices. Christiane Lauterbach of Atlanta Magazine writes, “to this day, there is no better bang for the buck in Atlanta.” In 2007, Bon Appétit picked the Atlanta-based chain as a “Top American Restaurant.",
-  imgLink: "http://www.taqueriadelsol.com/images/press_pic_02.jpg",
+  imgLink:
+    "https://cdn.vox-cdn.com/thumbor/lEosXa5zff-4beq-BdLBHW4cluw=/0x0:604x401/920x613/filters:focal(254x153:350x249):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55240725/422501_10150663725684455_261050127_n.0.jpg",
   foodItems: [fishTaco]
 });
 
