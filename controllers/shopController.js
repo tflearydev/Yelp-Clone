@@ -1,5 +1,5 @@
 // require Shop model
-const Shop = require('../models/shop')
+const Shop = require('../models/Shop')
 
 const shopController = {
     index: (req, res) => {
