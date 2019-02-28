@@ -5,7 +5,9 @@
     </div>
     <div class="text-center">
         <a class="action-btn btn btn-info" href="/{{shop.id}}/edit">EDIT</a>
-        <a href="" class="action-btn btn btn-danger">DELETE</a>
+        <form action="/{{shop.id}}?_method=DELETE" method="POST">
+            <input class="action-btn btn btn-danger" type="submit" value="DELETE">
+        </form>
     </div>
     <p>{{shop.description}}</p>
     </div>

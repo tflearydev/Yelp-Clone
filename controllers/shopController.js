@@ -29,7 +29,10 @@ const shopController = {
         })
     },
     delete: (req, res) => {
-        res.send(`Deleted the shop with the id of ${req.params.shopId}`)
+        Shop.findByIdAndDelete(req.params.shopId).then(() => {
+            console.log(`Donut with id of ${req.params.shopId}`)
+            res.redirect('/')
+        })
     }
 }
 
