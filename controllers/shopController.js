@@ -1,4 +1,4 @@
-const Shop = require('../models/Shop')
+const Shop = require('../models/shop')
 
 const shopController = {
     index: (req, res) => {

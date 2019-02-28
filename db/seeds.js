@@ -1,5 +1,5 @@
 const mongoose = require("./connection.js");
-const Shop = require("../models/Shop.js");
+const Shop = require("../models/shop.js");
 
 const pizza = {
   name: "Fellini's Special",
