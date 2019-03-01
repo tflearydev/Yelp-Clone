@@ -1,12 +1,7 @@
-const Shop = require ()
-
 const foodController = {
     show: (req, res) => {
-        let{shopId, foodId}=req.params
-        Shop.findById(shopId).then(shop =>{
-        res.render('foods/show', {foundItem})
-    })
-},
+        res.send(`Showing food item with id of ${req.params.foodId}`)
+    },
     new: (req, res) => {
         res.send(`Show a form to create a new food item`)
     },

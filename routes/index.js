@@ -21,4 +21,5 @@ router.get('/:shopId/food/:foodId/edit', foodController.edit)
 router.put('/:shopId/food/:foodId', foodController.update)
 router.delete('/:shopId/food/:foodId', foodController.delete)
 
+
 module.exports=router
