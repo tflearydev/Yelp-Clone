@@ -1,39 +1,46 @@
-const Shop = require('../models/Shop')
+const Shop = require('../models/Shop.js')
 
 const shopController = {
     index: (req, res) => {
         Shop.find()
-        .then(shops => {
-            res.render('shops/index', {shops})
-        })
+            .sort({name: -1})
+            .then(shops => {
+                res.render('index', {shops})
+            })
     },
     new: (req, res) => {
-        res.render('shops/new')
+        res.render('new')
     },
     create: (req, res) => {
-        res.send('Create a new shop in the db')
+        Shop.create(req.body).then(shop => {
+            res.redirect('/')
+        })
     },
     show: (req, res) => {
-        Shop.findById(req.params.shopId).then((shop) => {
-            res.render('shops/show', {shop})
+        let {shopId} = req.params
+        Shop.findById(shopId).then(shop => {
+            res.render('show', {shop, shopId})
         })
     },
     edit: (req, res) => {
-        Shop.findById(req.params.shopId).then((shop) => {
-            res.render('shops/edit', {shop})
+        Shop.findById(req.params.shopId).then(shop => {
+            res.render('edit', {shop})
         })
     },
     update: (req, res) => {
-        Shop.findByIdAndUpdate(req.params.shopId, req.body, {new: true}).then((updatedShop) => {
+        // need to pass {new: true} as the third argument in order to get the updated shop from the db
+        Shop.findByIdAndUpdate(req.params.shopId, req.body, {new: true}).then(() => {
             res.redirect(`/${req.params.shopId}`)
         })
     },
     delete: (req, res) => {
         Shop.findByIdAndDelete(req.params.shopId).then(() => {
-            console.log(`Donut with id of ${req.params.shopId}`)
+            console.log(`Deleted shop with the id of ${req.params.shopId}`)
             res.redirect('/')
         })
     }
+
+
 }
 
 module.exports = shopController
