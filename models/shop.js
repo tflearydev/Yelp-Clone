@@ -1,4 +1,4 @@
-const mongoose = require('../db/connection.js')
+```const mongoose = require('../db/connection.js')
 const Schema = mongoose.Schema
 
 const FoodSchema = new Schema({
@@ -15,4 +15,4 @@ const ShopSchema = new Schema({
     foodItems: [FoodSchema]
 })
 
-module.exports = mongoose.model('Shop', ShopSchema)
+module.exports = mongoose.model('Shop', ShopSchema)```
