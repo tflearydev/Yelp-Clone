@@ -16,9 +16,6 @@ router.delete('/:shopId', shopController.delete)
 router.get('/:shopId/food/:foodId', foodController.show)
 router.get('/:shopId/food/:foodId/edit', foodController.edit)
 
-
-
-
 module.exports = router
 
 const express = require('express')
