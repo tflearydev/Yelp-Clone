@@ -18,8 +18,6 @@ router.get('/:shopId/food/:foodId/edit', foodController.edit)
 
 module.exports = router
 
-const express = require('express')
-const router = express.Router()
 const recipeController = require('../controllers/recipeController')
 // Recipe routes
 router.get('/', recipeController.index)
