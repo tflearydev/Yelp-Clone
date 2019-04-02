@@ -20,3 +20,17 @@ router.get('/:shopId/food/:foodId/edit', foodController.edit)
 
 
 module.exports = router
+
+const express = require('express')
+const router = express.Router()
+const recipeController = require('../controllers/recipeController')
+// Recipe routes
+router.get('/', recipeController.index)
+router.get('/new', recipeController.new)
+router.post('/', recipeController.create)
+router.get('/:recipeId', recipeController.show)
+router.get('/recipeId/edit', recipeController.edit)
+router.put('/:recipeId', recipeController.update)
+// router.patch('/:recipeId', recipeController.update)
+router.delete('/:recipeId', recipeController.delete)
+module.exports = router
