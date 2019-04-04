@@ -5,7 +5,7 @@ Created a quick (few hours) yelp-like clone just for practice.
 ## Technologies Used:
 ____
 * Visual Studio Code
-* MongoDB, Expressjs, Handlebard, Node.js
+* MongoDB, Expressjs, Handlebars, Node.js
 * Javascript
 * Bootstrap,CSS
 
